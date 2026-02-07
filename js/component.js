@@ -15,11 +15,11 @@ const NavbarTemplate = `
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex space-x-6 items-center text-[20px]">
             <a href="/index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
-            <a href="../pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
+            <a href="./pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
             <!-- Services Dropdown -->
             <div class="group relative">
-                <a href="./pages/services.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
+                <a href="./pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
                     Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
                 </a>
                 <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block">
