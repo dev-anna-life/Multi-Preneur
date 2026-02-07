@@ -3,8 +3,8 @@ const NavbarTemplate = `
 <header class="fixed top-0 left-0 shadow-md w-full z-50 bg-[#29437f]">
     <div class="w-full px-4 py-3 flex justify-between items-center">
         <!-- Logo -->
-        <a href="/index.html">
-            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : 'images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
+        <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}">
+            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : './images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
         </a>
 
         <!-- Hamburger Icon -->
@@ -14,32 +14,32 @@ const NavbarTemplate = `
 
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex space-x-6 items-center text-[20px]">
-            <a href="/index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
-            <a href="/pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../pages/about.html' : './pages/about.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
             <!-- Services Dropdown -->
             <div class="group relative">
-                <a href="/pages/services.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
+                <a href="${window.location.pathname.includes('/pages/') ? '../pages/services.html' : './pages/services.html'}" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
                     Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
                 </a>
                 <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block">
-                    <a href="/pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
-                    <a href="/pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
-                    <a href="/pages/training.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Training</a>
+                    <a href="${window.location.pathname.includes('/pages/') ? '../pages/properties.html' : './pages/properties.html'}" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
+                    <a href="${window.location.pathname.includes('/pages/') ? '../pages/coaching.html' : './pages/coaching.html'}" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
+                    <a href="${window.location.pathname.includes('/pages/') ? '../pages/training.html' : './pages/training.html'}" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Training</a>
                 </div>
             </div>
 
-            <a href="/pages/work.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
-            <a href="/pages/contact.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
-            <a href="/pages/blog.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
-            <a href="/pages/dashboard.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../pages/work.html' : './pages/work.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../pages/contact.html' : './pages/contact.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../pages/blog.html' : './pages/blog.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
+            <a href="${window.location.pathname.includes('/pages/') ? '../pages/dashboard.html' : './pages/dashboard.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
         </nav>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#29437f] w-full px-6 pb-4 text-lg shadow-md border-t border-[#8ac249]">
-        <a href="/index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
-        <a href="/pages/about.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../pages/about.html' : './pages/about.html'}" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
         <!-- Services with sub-items -->
         <div>
@@ -47,16 +47,16 @@ const NavbarTemplate = `
                 Services <i id="chevron-icon" class="fas fa-chevron-down ml-1 transition-transform duration-200"></i>
             </button>
             <div id="services-dropdown" class="hidden pl-4 border-l border-[#8ac249]">
-                <a href="/pages/properties.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Properties</a>
-                <a href="/pages/coaching.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Coaching</a>
-                <a href="/pages/training.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Training</a>
+                <a href="${window.location.pathname.includes('/pages/') ? '../pages/properties.html' : './pages/properties.html'}" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Properties</a>
+                <a href="${window.location.pathname.includes('/pages/') ? '../pages/coaching.html' : './pages/coaching.html'}" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Coaching</a>
+                <a href="${window.location.pathname.includes('/pages/') ? '../pages/training.html' : './pages/training.html'}" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Training</a>
             </div>
         </div>
 
-        <a href="/pages/work.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
-        <a href="/pages/contact.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
-        <a href="/pages/blog.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
-        <a href="/pages/dashboard.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../pages/work.html' : './pages/work.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../pages/contact.html' : './pages/contact.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../pages/blog.html' : './pages/blog.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
+        <a href="${window.location.pathname.includes('/pages/') ? '../pages/dashboard.html' : './pages/dashboard.html'}" class="text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
     </div>
 </header>`;
 
@@ -67,7 +67,7 @@ const FooterTemplate = `
             <!-- Logo + Description -->
             <div class="flex-1">
                 <div class="flex items-center mb-4">
-                    <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : 'images/logo.svg'}" alt="Logo" class="h-12 w-auto mr-2 mb-3">
+                    <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : './images/logo.svg'}" alt="Logo" class="h-12 w-auto mr-2 mb-3">
                     <span class="text-xl font-bold text-white">Multi-<span class="text-[#8ac249]">Preneur</span></span>
                 </div>
                 <p class="text-sm leading-relaxed max-w-sm mb-4 text-[18px]">Mr Multi-Preneur is dedicated to understanding your unique needs. With years of sales and mentorship, he's empowered thousands in Nigeria to achieve homeownership confidently.</p>
@@ -119,11 +119,9 @@ const FooterTemplate = `
     </div>
 </footer>`;
 
-// ... rest of your component.js code remains the same ...
 function loadComponents() {
   console.log("Loading components...");
   
-  // Remove existing header and footer if they exist
   const existingHeader = document.querySelector('header');
   const existingFooter = document.querySelector('footer');
   
@@ -134,17 +132,14 @@ function loadComponents() {
     existingFooter.remove();
   }
 
-  // Create and insert navbar at the top of body
   const navbarContainer = document.createElement('div');
   navbarContainer.innerHTML = NavbarTemplate;
   document.body.insertBefore(navbarContainer.firstElementChild, document.body.firstChild);
 
-  // Create and insert footer at the end of body
   const footerContainer = document.createElement('div');
   footerContainer.innerHTML = FooterTemplate;
   document.body.appendChild(footerContainer.firstElementChild);
 
-  // Initialize mobile menu functionality
   initializeMobileMenu();
 }
 
@@ -157,11 +152,7 @@ function initializeMobileMenu() {
   const servicesDropdown = document.getElementById("services-dropdown");
   const chevronIcon = document.getElementById("chevron-icon");
 
-  console.log("Elements found:", { hamburger, mobileMenu, servicesToggle, servicesDropdown, chevronIcon });
-
-  // Mobile hamburger menu
   if (hamburger && mobileMenu) {
-    // Remove any existing event listeners
     const newHamburger = hamburger.cloneNode(true);
     hamburger.parentNode.replaceChild(newHamburger, hamburger);
     
@@ -171,7 +162,6 @@ function initializeMobileMenu() {
     });
   }
 
-  // Services dropdown in mobile menu
   if (servicesToggle && servicesDropdown && chevronIcon) {
     const newServicesToggle = servicesToggle.cloneNode(true);
     servicesToggle.parentNode.replaceChild(newServicesToggle, servicesToggle);
@@ -183,7 +173,6 @@ function initializeMobileMenu() {
     });
   }
 
-  // Close mobile menu when clicking on links
   if (mobileMenu) {
     const mobileLinks = mobileMenu.querySelectorAll("a");
     mobileLinks.forEach((link) => {
@@ -194,9 +183,7 @@ function initializeMobileMenu() {
   }
 }
 
-// Event delegation as backup
 document.addEventListener("click", (e) => {
-  // Hamburger menu toggle
   if (e.target.closest("#hamburger") || e.target.id === "hamburger") {
     const mobileMenu = document.getElementById("mobile-menu");
     if (mobileMenu) {
@@ -205,7 +192,6 @@ document.addEventListener("click", (e) => {
     }
   }
   
-  // Services dropdown toggle
   if (e.target.closest("#services-toggle") || e.target.id === "services-toggle") {
     const servicesDropdown = document.getElementById("services-dropdown");
     const chevronIcon = document.getElementById("chevron-icon");
@@ -217,5 +203,4 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Load components when page loads
 document.addEventListener("DOMContentLoaded", loadComponents);
