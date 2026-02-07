@@ -8,9 +8,11 @@ function registerCourse(course) {
 
     alert(`You're registering for: ${courseNames[course]}\n\nNext steps:\n1. Complete the registration form\n2. Make payment\n3. Receive course materials\n4. Join the upcoming session!\n\nRedirecting to registration...`);
 
-    window.location.href = '../pages/contact.html'
+    const contactPath = window.location.pathname.includes('/pages/') ? '../pages/contact.html' : './pages/contact.html';
+    window.location.href = contactPath;
 }
 
 function contactSchedule() {
-    Window.location.href = '../pages/contact.html'
+    const contactPath = window.location.pathname.includes('/pages/') ? '../pages/contact.html' : './pages/contact.html';
+    window.location.href = contactPath;
 }
