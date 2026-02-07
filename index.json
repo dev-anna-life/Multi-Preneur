@@ -1,0 +1,95 @@
+{
+  "site": {
+    "name": "Multi-Preneur",
+    "tagline": "Pioneers of future possibilities",
+    "description": "Mr Multi-Preneur is dedicated to understanding your unique needs. With years of sales and mentorship, he's empowered thousands in Nigeria to achieve homeownership confidently.",
+    "phone": "(+234) 706 794 6389",
+    "email": "info@mr-multi-preneur.com",
+    "address": {
+      "street": "123 Real Estate Ave",
+      "city": "Asaba",
+      "state": "Nigeria",
+      "zip": "12345"
+    }
+  },
+  "colors": {
+    "primary": "#8ac249",
+    "accent": "#29437f",
+    "background": "#ffffff",
+    "text": "#333333"
+  },
+  "services": [
+    {
+      "id": "property-sales",
+      "title": "Property Sales",
+      "description": "We help you buy the best and most affordable properties with trusted documents.",
+      "icon": "fas fa-home"
+    },
+    {
+      "id": "coaching",
+      "title": "Coaching",
+      "description": "Learn from our experience and gain the right knowledge to thrive in the real estate industry.",
+      "icon": "fas fa-chalkboard-teacher"
+    },
+    {
+      "id": "training",
+      "title": "Training",
+      "description": "Get hands-on training programs and certifications to equip you with the skills needed in the real estate market.",
+      "icon": "fas fa-graduation-cap"
+    }
+  ],
+  "properties": [
+    {
+      "name": "Millennium Gardens, Ibusa",
+      "location": "Asaba",
+      "image": "/images/Millennium-Gardens-Ibusa-1.png"
+    },
+    {
+      "name": "Elegance Havana",
+      "location": "Asaba",
+      "image": "/images/Elegance Havana 2.jpg"
+    },
+    {
+      "name": "Diaspora Estate",
+      "location": "Asaba",
+      "image": "/images/Diaspora Estate 3.jpg"
+    },
+    {
+      "name": "Elegance Plus",
+      "location": "Asaba",
+      "image": "/images/Elegance Plus 4.jpg"
+    },
+    {
+      "name": "Twin Town Estate",
+      "location": "Asaba",
+      "image": "/images/Twin Town Estate 5.jpg"
+    },
+    {
+      "name": "Jaynes Legacy",
+      "location": "Asaba",
+      "image": "/images/Jaynes Legacy 6.jpg"
+    }
+  ],
+  "stats": [
+    {
+      "number": "5+",
+      "label": "Years in Business"
+    },
+    {
+      "number": "3,000+",
+      "label": "Individuals Trained"
+    },
+    {
+      "number": "₦1.5B+",
+      "label": "Sales Generated"
+    }
+  ],
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#",
+    "linkedin": "#",
+    "youtube": "#"
+  }
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Multi-preneur</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-pill {
+            transition: all 0.3s ease;
+        }
+        .category-pill:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-primary/90 text-white py-20 px-4 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Real Estate Insights & Tips
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-8">
+                Expert advice, market updates, and success stories from Nigeria's real estate market
+            </p>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="flex gap-4">
+                    <div class="relative flex-1">
+                        <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input 
+                            type="text" 
+                            id="searchInput"
+                            placeholder="Search articles..."
+                            class="w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-4 focus:ring-primary/30 border-0"
+                        >
+                    </div>
+                    <button onclick="searchArticles()" class="bg-accent hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                        <i class="fas fa-search mr-2"></i>Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button onclick="filterCategory('all')" class="category-pill px-6 py-2 rounded-full bg-primary text-white font-semibold shadow-md" data-category="all">
+                All Articles
+            </button>
+            <button onclick="filterCategory('market-updates')" class="category-pill px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 font-semibold shadow-md" data-category="market-updates">
+                <i class="fas fa-chart-line mr-2"></i>Market Updates
+            </button>
+            <button onclick="filterCategory('investment-tips')" class="category-pill px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 font-semibold shadow-md" data-category="investment-tips">
+                <i class="fas fa-lightbulb mr-2"></i>Investment Tips
+            </button>
+            <button onclick="filterCategory('property-guides')" class="category-pill px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 font-semibold shadow-md" data-category="property-guides">
+                <i class="fas fa-book mr-2"></i>Property Guides
+            </button>
+            <button onclick="filterCategory('legal')" class="category-pill px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 font-semibold shadow-md" data-category="legal">
+                <i class="fas fa-gavel mr-2"></i>Legal & Docs
+            </button>
+            <button onclick="filterCategory('success-stories')" class="category-pill px-6 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100 font-semibold shadow-md" data-category="success-stories">
+                <i class="fas fa-trophy mr-2"></i>Success Stories
+            </button>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-accent mb-8">
+            <i class="fas fa-star text-primary mr-2"></i>Featured Article
+        </h2>
+        <div class="blog-card bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="relative h-64 lg:h-auto">
+                    <img 
+                        src="/images/Asaba10.jpg" 
+                        alt="Featured article" 
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            <i class="fas fa-star mr-1"></i>Featured
+                        </span>
+                    </div>
+                </div>
+                <div class="p-8 lg:p-12 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">Market Updates</span>
+                        <span class="text-gray-500 text-sm">
+                            <i class="fas fa-calendar mr-1"></i>February 4, 2026
+                        </span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-accent mb-4 hover:text-primary transition-colors cursor-pointer">
+                        Real Estate Investment Trends in Nigeria for 2026
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Discover the top investment opportunities and emerging markets in Nigerian real estate this year. Learn about the cities showing the most promise, property types with highest ROI, and expert predictions for the next 12 months.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Eponix Properties</p>
+                                <p class="text-sm text-gray-500">Real Estate Expert</p>
+                            </div>
+                        </div>
+                        <a href="../pages/blog-post.html" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-accent mb-8">Latest Articles</h2>
+        
+        <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="property-guides">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="/images/asaba12.jpg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Property Guides
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>February 3, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>5 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        5 Essential Things to Check Before Buying Land in Nigeria
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Protect your investment by knowing what to verify before purchasing land. From title verification to environmental checks, here's your complete checklist.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>1,234 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="legal">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="/images/coaching.jpeg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Legal & Docs
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>February 1, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>7 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        Understanding Certificate of Occupancy (C of O) in Nigeria
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Everything you need to know about C of O - what it is, why it matters, how to obtain one, and common pitfalls to avoid in the process.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>892 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="investment-tips">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="../images/ROI.jpeg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Investment Tips
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>January 30, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>8 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        How to Calculate Real Estate ROI: A Complete Guide
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Learn the formulas and metrics successful investors use to evaluate property investments and maximize returns in the Nigerian market.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>2,145 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="market-updates">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="/images/Jaynes Legacy 6.jpg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Market Updates
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>January 28, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>6 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        Best Investment Areas in Asaba and Delta State 2026
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Discover emerging neighborhoods and high-growth areas in Asaba. Market analysis, price trends, and investment opportunities in Delta State.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>1,567 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="property-guides">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="../images/asaba15.jpg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Property Guides
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>January 25, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>9 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        Property Management: DIY vs Professional Services
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        Weighing the pros and cons of managing your own rental property versus hiring professional property managers. Cost analysis included.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>743 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl" data-category="success-stories">
+                <div class="relative h-48 overflow-hidden">
+                    <img 
+                        src="../images/Portfolio.jpeg" 
+                        alt="Blog post" 
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    >
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            Success Stories
+                        </span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="text-gray-500 text-sm mb-3">
+                        <i class="fas fa-calendar mr-1"></i>January 22, 2026
+                        <span class="mx-2">•</span>
+                        <i class="fas fa-clock mr-1"></i>10 min read
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3 hover:text-primary transition-colors cursor-pointer">
+                        From First-Time Buyer to Property Portfolio: A Success Story
+                    </h3>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        How one of our clients built a portfolio of 5 properties in 3 years. Learn their strategy, challenges faced, and lessons learned.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i class="fas fa-eye"></i>
+                            <span>3,421 views</span>
+                        </div>
+                        <a href="../pages/blog-post.html" class="text-primary hover:text-accent font-semibold transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <i class="fas fa-plus-circle mr-2"></i>Load More Articles
+            </button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gradient-to-r from-primary to-primary/90 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i class="fas fa-envelope-open-text text-5xl text-white mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Never Miss an Update
+            </h2>
+            <p class="text-xl text-white/90 mb-8">
+                Subscribe to our newsletter for the latest real estate insights, market updates, and investment tips delivered to your inbox weekly.
+            </p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                <input 
+                    type="email" 
+                    placeholder="Enter your email address"
+                    class="flex-1 px-6 py-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-white/30"
+                    required
+                >
+                <button type="submit" class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-bold transition-colors whitespace-nowrap">
+                    Subscribe Now
+                </button>
+            </form>
+            <p class="text-white/70 text-sm mt-4">
+                <i class="fas fa-lock mr-1"></i>We respect your privacy. Unsubscribe anytime.
+            </p>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-accent mb-8 text-center">Popular Topics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group">
+                <i class="fas fa-home text-4xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold text-accent">First-Time Buyers</h3>
+            </a>
+            <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group">
+                <i class="fas fa-money-bill-wave text-4xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold text-accent">Property Financing</h3>
+            </a>
+            <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group">
+                <i class="fas fa-tools text-4xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold text-accent">Home Renovation</h3>
+            </a>
+            <a href="#" class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow text-center group">
+                <i class="fas fa-landmark text-4xl text-primary mb-3 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold text-accent">Market Trends</h3>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="/js/component.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Preneur</title>
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-white text-gray-800 transition duration-300"
+    style="font-family: Inter, sans-serif"
+  >
+    <!-- Header -->
+    <header class="fixed top-0 left-0 shadow-md w-full z-50 bg-[#29437f]">
+      <div class="w-full px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/index.html">
+          <img src="/images/logo.svg" alt="Realtor Harry Logo" class="w-28" />
+        </a>
+
+        <!-- Hamburger Icon -->
+        <button
+          id="hamburger"
+          class="md:hidden text-4xl hover:text-[#8ac249] w-[100px] text-white transition-colors duration-300"
+        >
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+
+        <!-- Nav Links (Desktop) -->
+        <nav class="hidden md:flex space-x-6 items-center text-[20px]">
+          <a
+            href="index.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="/pages/about.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >About</a
+          >
+
+          <!-- Services Dropdown -->
+          <div class="group relative">
+            <a
+              href="/pages/services.html"
+              class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300"
+            >
+              Services
+              <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
+            </a>
+            <div
+              class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block"
+            >
+              <a
+                href="/pages/properties.html"
+                class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]"
+                >Properties</a
+              >
+              <a
+                href="/pages/coaching.html"
+                class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]"
+                >Coaching</a
+              >
+              <a
+                href="/pages/training.html"
+                class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]"
+                >Training</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="/pages/work.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >Work with Us</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >Contact</a
+          >
+          <a
+            href="/pages/blog.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >Blog</a
+          >
+          <a
+            href="/pages/dashboard.html"
+            class="text-white hover:text-[#8ac249] transition-colors duration-300"
+            >Dashboard</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#29437f] w-full px-6 pb-4 text-lg shadow-md border-t border-[#8ac249]"
+      >
+        <a
+          href="/index.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >Home</a
+        >
+        <a
+          href="/pages/about.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >About</a
+        >
+
+        <!-- Services with sub-items -->
+        <div>
+          <button
+            id="services-toggle"
+            class="block py-2 font-semibold w-full text-left text-white flex items-center justify-between"
+          >
+            Services
+            <i
+              id="chevron-icon"
+              class="fas fa-chevron-down ml-1 transition-transform duration-200"
+            ></i>
+          </button>
+          <div
+            id="services-dropdown"
+            class="hidden pl-4 border-l border-[#8ac249]"
+          >
+            <a
+              href="/pages/properties.html"
+              class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+              >• Properties</a
+            >
+            <a
+              href="/pages/coaching.html"
+              class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+              >• Coaching</a
+            >
+            <a
+              href="/pages/training.html"
+              class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+              >• Training</a
+            >
+          </div>
+        </div>
+
+        <a
+          href="/pages/work.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >Work with Us</a
+        >
+        <a
+          href="/pages/contact.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >Contact</a
+        >
+        <a
+          href="/pages/blog.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >Blog</a
+        >
+        <a
+          href="/pages/dashboard.html"
+          class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300"
+          >Dashboard</a
+        >
+      </div>
+    </header>
+
+    <div class="border-b border-gray-300 w-full"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-36 bg-white mt-8 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 max-w-7xl mx-auto px-4"
+      >
+        <!-- Image on Left -->
+        <div class="w-full">
+          <img
+            src="/images/Bro.jpg"
+            alt="Hero Image"
+            class="w-full max-h-[450px] object-cover rounded shadow-md transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+
+        <!-- Text on Right -->
+        <div class="w-full">
+          <p
+            class="text-sm text-[#8ac249] uppercase text-lg font-bold mb-2 mt-2"
+          >
+            Reach Out To Us
+          </p>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#29437f] leading-tight mb-4"
+          >
+            Request a Free <br class="hidden md:block" />
+            Consultation
+          </h1>
+          <p class="text-black text-base md:text-lg font-semibold mb-6">
+            We can help you buy an affordable land in a fast, <br />
+            developing area for residential or commercial purpose.
+          </p>
+          <a
+            href="/pages/contact.html"
+            class="inline-block bg-[#29437f] text-white font-medium py-3 px-6 rounded-md hover:bg-[#8ac249] transition-all duration-400 transform hover:scale-105"
+            >Schedule Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      class="bg-white py-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-[#29437f] mb-12 text-center"
+        >
+          Our Services
+        </h2>
+
+        <!-- Services Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6"
+        >
+          <!-- Properties card -->
+          <div
+            class="bg-[#29437f] p-6 sm:p-10 flex flex-col h-[300px] rounded-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-white text-5xl mb-4 text-center">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-white text-lg font-bold text-center mb-4">
+              Property Sales
+            </h3>
+            <p
+              class="text-white text-base leading-relaxed font-bold text-center"
+            >
+              We help you buy the best and most affordable properties with
+              trusted documents.
+            </p>
+          </div>
+
+          <!-- Coaching card -->
+          <div
+            class="bg-[#29437f] p-6 sm:p-10 flex flex-col h-[300px] rounded-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-white text-6xl mb-4 text-center">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="text-white text-xl font-bold text-center mb-4">
+              Coaching
+            </h3>
+            <p
+              class="text-white text-base leading-relaxed font-bold text-center"
+            >
+              Learn from our experience and gain the right knowledge to thrive
+              in the real estate industry.
+            </p>
+          </div>
+
+          <!-- Training card -->
+          <div
+            class="bg-[#29437f] p-6 sm:p-10 flex flex-col h-[300px] rounded-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-white text-6xl mb-4 text-center">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="text-white text-xl font-bold text-center mb-4">
+              Training
+            </h3>
+            <p
+              class="text-white text-base leading-relaxed font-bold text-center"
+            >
+              Get hands-on training programs and certifications to equip you
+              with the skills needed in the real estate market.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buy properties grid -->
+    <section
+      class="bg-white px-0 py-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-serif text-black mb-6 text-center">
+          Buy Properties
+        </h2>
+
+        <p class="max-w-3xl mx-auto text-[18px] text-black mb-6 text-center">
+          I Have in-depth knowledge of real estate. <br />
+          I am committed to helping you find your dream property, at any
+          fast-developing locations.
+        </p>
+
+        <p class="text-black font-medium text-[18px] mb-12 text-center">
+          Make your Home Ownership Dream A Reality.
+        </p>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8"
+          id="propertyGrid"
+        ></div>
+      </div>
+
+      <!-- See more -->
+      <div class="text-center mt-6">
+        <a
+          href="pages/see.html"
+          class="bg-[#29437f] text-white font-bold py-4 px-6 rounded shadow hover:bg-[#8ac249] hover:text-white transition-all duration-300 transform hover:scale-105"
+          >SEE MORE</a
+        >
+      </div>
+    </section>
+
+    <!-- Stats section -->
+    <section
+      class="bg-[#29437f] text-white py-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div class="text-center mb-12">
+        <p class="uppercase text-white tracking-wide mb-6">
+          I'm eager to serve
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">
+          Leverage my wealth of experience
+        </h2>
+      </div>
+
+      <div
+        class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white text-center"
+      >
+        <div
+          class="py-6 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+        >
+          <p class="text-3xl font-bold">5+</p>
+          <p class="uppercase text-lg text-[#8ac249] tracking-wide">
+            Years in Business
+          </p>
+        </div>
+        <div
+          class="py-6 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+        >
+          <p class="text-3xl font-bold">3,000+</p>
+          <p class="uppercase text-lg text-[#8ac249] tracking-wide">
+            Individuals Trained
+          </p>
+        </div>
+        <div
+          class="py-6 opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+        >
+          <p class="text-3xl font-bold">₦1.5B+</p>
+          <p class="uppercase text-lg text-[#8ac249] tracking-wide">
+            Sales Generated
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unlock Potential Section -->
+    <section
+      class="py-16 bg-white opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <!-- Heading -->
+        <h3
+          class="text-[#8ac249] text-base uppercase tracking-widest font-medium mb-2"
+        >
+          Earn From Real Estate
+        </h3>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#29437f] mb-4">
+          Unlock Your Potential
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg text-black mb-12">
+          Become a PWAN Business Owner (PBO). Get all the support you need to
+          achieve financial independence in real estate.
+        </p>
+
+        <!-- Cards -->
+        <div class="grid gap-8 md:grid-cols-3 gap-y-16 md:gap-y-8 gap-x-8">
+          <!-- Card 1 -->
+          <div
+            class="relative bg-[#29437f] rounded-xl shadow-lg pt-14 pb-8 px-6 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+          >
+            <div
+              class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#8ac249] rounded-full flex items-center justify-center border-4 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-10 h-10 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 9.75V21h6V15h6v6h6V9.75L12 3 3 9.75z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-white mt-2 mb-4">Properties</h3>
+            <p class="text-white text-2xl">
+              Potentially earn from our properties across Nigeria.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative bg-[#29437f] rounded-xl shadow-lg pt-14 pb-8 px-6 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+          >
+            <div
+              class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#8ac249] rounded-full flex items-center justify-center border-4 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+                />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-white mt-2 mb-4">Training</h3>
+            <p class="text-white text-2xl">
+              Access free training both online and in-person.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative bg-[#29437f] rounded-xl shadow-lg pt-14 pb-8 px-6 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+          >
+            <div
+              class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#8ac249] rounded-full flex items-center justify-center border-4 border-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-10 h-10 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 11V7a4 4 0 00-8 0v4M4 11h16v10H4V11z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-white mt-2 mb-4">Offices</h3>
+            <p class="text-white text-2xl">
+              Leverage our offices to build your business as a PBO.
+            </p>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="mt-8">
+          <a
+            href="#contact"
+            class="inline-block bg-[#29437f] text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#8ac249] hover:text-white transition duration-300 transform hover:scale-105"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <article
+      class="py-16 bg-[#29437f] opacity-0 translate-y-8 transition-all duration-1000 ease-out"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-[#8ac249] text-[32px] mb-12">Buy A Property</h2>
+        <p class="text-white text-3xl mb-12">
+          Looking for a residential or commercial <br />
+          plots to buy and build?
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-black text-white py-3 px-6 shadow-lg hover:bg-[#8ac249] hover:text-white transition duration-300 transform hover:scale-105 rounded-lg"
+          >Let Us TALK</a
+        >
+      </div>
+    </article>
+
+    <footer id="navbar-container" class="bg-[#101828] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row gap-10 flex-1">
+          <div class="flex-1">
+            <div class="flex items-center mb-4">
+              <img
+                src="/images/logo.svg"
+                alt="Logo"
+                class="h-12 w-auto mr-2 mb-3"
+              />
+              <span class="text-xl font-bold text-white"
+                >Multi-<span class="text-[#8ac249]">Preneur</span></span
+              >
+            </div>
+            <p class="text-sm leading-relaxed max-w-sm mb-4 text-[18px]">
+              Mr Multi-Preneur is dedicated to understanding your unique needs.
+              With years of sales and mentorship, he's empowered thousands in
+              Nigeria to achieve homeownership confidently.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-[1rem] mb-3 text-[20px]">Privacy</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-[#8ac249] text-[18px] transition-colors duration-300"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-[#8ac249] text-[18px] transition-colors duration-300"
+                  >Cookies Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mt-3 mb-6">Follow Us</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center space-x-3">
+              <i class="fa-brands fa-facebook text-xl text-[#8ac249]"></i>
+              <a
+                href="https://www.facebook.com/share/1UYjZ9qPWV/"
+                class="hover:text-[#8ac249] text-[18px] transition-colors duration-300"
+                >Facebook</a
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i
+                class="fa-brands fa-square-instagram text-xl text-[#8ac249]"
+              ></i>
+              <a
+                href="https://www.instagram.com/eponixproperties?"
+                class="hover:text-[#8ac249] text-[18px] transition-colors duration-300"
+                >Instagram</a
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-brands fa-x-twitter text-xl text-[#8ac249]"></i>
+              <a
+                href="#"
+                class="hover:text-[#8ac249] text-[20px] transition-colors duration-300"
+                >Twitter</a
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-brands fa-linkedin text-xl text-[#8ac249]"></i>
+              <a
+                href="#"
+                class="hover:text-[#8ac249] text-[20px] transition-colors duration-300"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-brands fa-youtube text-xl text-[#8ac249]"></i>
+              <a
+                href="#"
+                class="hover:text-[#8ac249] text-[20px] transition-colors duration-300"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="pt-6 text-center text-sm text-white">
+          <p class="text-[18px]">
+            &copy; 2025 <span class="font-medium">Multi-Preneur</span>. Designed
+            by
+            <span class="text-white font-semibold"
+              >Dev Anna <i class="fa-solid fa-heart text-[#8ac249]"></i>. All
+              Rights Reserved.</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <!-- <script src="/js/component.js"></script> -->
+  </body>
+</html>

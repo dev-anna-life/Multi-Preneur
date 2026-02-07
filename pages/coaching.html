@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coaching-Multi-Preneur</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .coaching-card {
+        transition: all 0.4s ease;
+      }
+      .coaching-card:hover {
+        transform: translateY(-10px);
+      }
+      .feature-item {
+        transition: all 0.3s ease;
+      }
+      .feature-item:hover {
+        background-color: rgba(138, 194, 73, 0.05);
+      }
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div id="navbar-container"></div>
+
+    <section
+      class="bg-gradient-to-r from-accent to-accent/90 text-white py-20 px-4 mt-20"
+    >
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          One-on-One Real Estate Coaching
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-8">
+          Transform your estate journey with personalized coaching from
+          experienced professionals
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="../pages/training.html"
+            class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-colors"
+          >
+            <i class="fas fa-rocket mr-2"></i>View Programs
+          </a>
+          <a
+            href="#book-session"
+            class="bg-white hover:bg-gray-100 text-accent font-bold py-4 px-8 rounded-lg transition-colors"
+          >
+            <i class="fas fa-calendar-check mr-2"></i>Book Free Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">500+</div>
+          <p class="text-gray-600">Students Coached</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">₦2.5B+</div>
+          <p class="text-gray-600">Student Investments</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">95%</div>
+          <p class="text-gray-600">Success Rate</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">10+</div>
+          <p class="text-gray-600">Years of Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-accent mb-4">
+          Why You Need Real Estate Coaching
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Avoid costly mistakes and accelerate your success with expert guidance
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-chart-line text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">Faster Results</h3>
+          <p class="text-gray-600">
+            Learn from those who've already succeded and skip years of trials
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-shield-alt text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">
+            Avoid Costly Mistakes
+          </h3>
+          <p class="text-gray-600">
+            Prevent expensive errors thta could cost you millions in bad
+            investments
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-users text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">Network Access</h3>
+          <p class="text-gray-600">
+            Connect with other investors, developers, and industry professionals
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-lightbulb text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">
+            Personalised Strategy
+          </h3>
+          <p class="text-gray-600">
+            Get a customised investment plan tailored to your goals and budget
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-hands-helping text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">Ongoing Support</h3>
+          <p class="text-gray-600">
+            Get help when you need it most, from property selection to closing
+            deals
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-trophy text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-accent mb-3">Proven System</h3>
+          <p class="text-gray-600">
+            Follow battle-tested frameworks that have worked for hundreds of
+            investors
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Programs" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-accent mb-4">
+            Choose our coaching programs
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Flexible programs tailored for every stage of your real estate
+            journey
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div
+            class="coaching-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-200"
+          >
+            <div
+              class="bg-gradient-to-r from-gray-100 to-gray-200 p-8 text-center"
+            >
+              <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg"
+              >
+                <i class="fas fa-seedling text-accent text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-accent mb-2">
+                Starter Program
+              </h3>
+              <p class="text-gray-600 mb-4">Perfect for beginners</p>
+              <div class="text-4xl font-bold text-accent mb-2">₦150,000</div>
+              <p class="text-sm text-gray-600">8 weeks • Bi-weekly sessions</p>
+            </div>
+            <div class="p-8">
+              <h4 class="font-bold text-accent text-primary">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                What's Included
+              </h4>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700"
+                    >4 One-on-one coaching sessions (1 hour each)</span
+                  >
+                </li>
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700"
+                    >Real estate fundamentals training</span
+                  >
+                </li>
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700"
+                    >Property evaluation checklist</span
+                  >
+                </li>
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700">Access to resource library</span>
+                </li>
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700"
+                    >Email support between sessions</span
+                  >
+                </li>
+                <li class="flex items-start feature-item p-2 rounded">
+                  <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                  <span class="text-gray-700"
+                    >First investment action plan</span
+                  >
+                </li>
+              </ul>
+
+              <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                <h5 class="font-semibold text-accent mb-2">Best For:</h5>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• First-time property buyers</li>
+                  <li>• Complete beginners</li>
+                  <li>• Budget: ₦2M - ₦10M</li>
+                </ul>
+              </div>
+
+              <button
+                onclick="enrollProgram('starter')"
+                class="w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-bold transition-colors"
+              >
+                <i class="fas fa-rocket mr-2"></i>Enroll Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="coaching-card bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-primary relative transform scale-105"
+          >
+            <div
+              class="absolute top-0 left-0 right-0 bg-primary text-white text-center py-2 text-sm font-bold"
+            >
+              <i class="fas fa-star mr-1"></i>MOST POPULAR
+            </div>
+            <div
+              class="bg-gradient-to-r from-primary to-primary/90 p-8 text-center text-white mt-8"
+            >
+              <div
+                class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg"
+              >
+                <i class="fas fa-gem text-primary text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Growth</h3>
+              <p class="text-white/90 mb-4">Build your portfolio</p>
+              <div class="text-4xl font-bold mb-2">₦350,000</div>
+              <p class="text-sm text-white/90">12 weeks • Weekly sessions</p>
+            </div>
+            <h4 class="font-bold text-accent mb-4 flex items-center">
+              <i class="fas fa-check-circle text-primary mr-2"></i>
+              What's Included:
+            </h4>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >12 One-on-one coaching sessions (1.5 hours each)</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Advanced investment strategies</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Portfolio diversification planning</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">ROI calculation templates</span>
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Property inspection accompaniment (2x)</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">Deal analysis on 5 properties</span>
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">Access to investor coommunity</span>
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Priority email Whatsapp support</span
+                >
+              </li>
+            </ul>
+
+            <div class="bg-primary/10 rounded-lg p-4 mb-6">
+              <h5 class="font-semibold text-primary mb-2">Best For:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Investors with 1-2 properties</li>
+                <li>• Looking to scale up</li>
+                <li>• Budget: ₦10M - ₦50M</li>
+              </ul>
+            </div>
+
+            <button
+              onclick="enrollProgram('growth')"
+              class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-lg font-bold transition-colors"
+            >
+              <i class="fas fa-rocket mr-2"></i>Enroll Now
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="coaching-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-accent"
+        >
+          <div
+            class="bg-gradient-to-r from-accent to-accent/90 p-8 text-center text-white"
+          >
+            <div
+              class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg"
+            >
+              <i class="fas fa-star text-accent text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Elite Mastery</h3>
+            <p class="text-white/90 mb-4">For serious investors</p>
+            <div class="text-4xl font-bold mb-2">₦750,000</div>
+            <p class="text-sm text-white/90">16 weeks • Custom schedule</p>
+          </div>
+          <div class="p-8">
+            <h4 class="font-bold text-primary mb-4 flex items-center">
+              <i class="fas fa-check-circle text-accent mr-2"></i>
+              What's Included:
+            </h4>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >16 intensive coaching sessions (2 hours each)</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Commercial real estate investment strategies</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Large-scale investment planning</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">Joint venture structuring</span>
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Unlimited property inspections</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">Unlimited data analysis</span>
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Direct access to top-tier mentors</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700"
+                  >Network with high-net-worth investors</span
+                >
+              </li>
+              <li class="flex items-start feature-item p-2 rounded">
+                <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                <span class="text-gray-700">Lifetime community membership</span>
+              </li>
+            </ul>
+
+            <div class="bg-accent/10 rounded-lg p-4 mb-6">
+              <h5 class="font-semibold text-accent mb-2">Best For:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Experienced investors</li>
+                <li>• Commercial properties</li>
+                <li>• Budget: ₦50M+</li>
+              </ul>
+            </div>
+
+            <button
+              onclick="enrollProgram('elite')"
+              class="w-full bg-accent hover:bg-accent/90 text-white py-3 px-6 rounded-lg font-bold transition-colors"
+            >
+              <i class="fas fa-rocket mr-2"></i>Enroll Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 bg-gradient-to-r from-primary to-primary/90 rounded-2xl shadow-2xl p-10 text-white"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Need Something Custom?</h3>
+            <p class="text-white/90 mb-6 text-lg">
+              Get a personalised coaching package tailored exactly to your
+              needs, goals, and timeline.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-3"></i>
+                <span>Flexible scheduling</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-3"></i>
+                <span>Focus on specific topics</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-3"></i>
+                <span>Pay as you go options</span>
+              </li>
+            </ul>
+            <button
+              onclick="contactCustom()"
+              class="bg-white text-primary hover:bg-gray-100 py-3 px-8 rounded-lg font-bold transition-colors"
+            >
+              <i class="fas fa-comment-dots mr-2"></i>Discuss Custom Package
+            </button>
+          </div>
+          <div class="text-center">
+            <div>
+              <img
+                src="../images/coaching.jpeg"
+                alt="Custom Coaching"
+                class="mx-auto w-64"
+              />
+            </div>
+            <p class="text-xl font-semibold">Your Success, Your Way</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-accent mb-4">Success Stories</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Real results from rel students who transformed their lives through our
+          coaching
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="testimonial-card bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+            >
+              <i class="fas fa-user text-primary text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-accent">Chioma Nwosu</h4>
+              <p class="text-sm text-gray-600">Growth Program Graduate</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "I went from zero knowledge to owning 3 properties in 18 months. The
+            coaching helped me avoid mistakes that wuld have cost me millions,
+            thanks to coach Multi-preneur. Best investment I ever made!"
+          </p>
+          <div class="text-sm text-primary font-semibold">
+            <i class="fas fa-chart-line mr-1"></i>Portfolio Value: ₦45M
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+            >
+              <i class="fas fa-user text-primary text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-accent">Emeka Okafor</h4>
+              <p class="text-sm text-gray-600">Elite Mastery Graduate</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The Elite Mastery program gave me the tools and mindset to build a
+            successful real estate business. I now manage 5 properties and have
+            a team of 10 agents. Coach Multi-preneur gelped me struure my first
+            ₦120M project!"
+          </p>
+          <div class="text-sm text-primary font-semibold">
+            <i class="fas fa-chart-line mr-1"></i>First Project: ₦120M
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+            >
+              <i class="fas fa-user text-primary text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-accent">Blessing Adeyemi</h4>
+              <p class="text-sm text-gray-600">Starter Program Graduate</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "As a beginner, I was hesitant to invest in coaching, but it was the
+            best decision I made. I learned how to evaluate properties and
+            negotiate deals. I bought my first property within 3 months and it's
+            already appreciating!"
+          </p>
+          <div class="text-sm text-primary font-semibold">
+            <i class="fas fa-chart-line mr-1"></i>First Property: ₦8M
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-accent mb-4">
+            How Coaching Works
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            SIMPLE 4-STEP FROM ENROLLMENT TO SUCCESS
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto text-white text-2xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold text-accent mb-3">
+              Book Consultation
+            </h3>
+            <p class="text-gray-600">
+              Schedule your 30-minute discovery call to disuss your goals
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto text-white text-2xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold text-accent mb-3">Choose A Program</h3>
+            <p class="text-gray-600">
+              Select a program that aligns with your goals and fits your budget.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto text-white text-2xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold text-accent mb-3">Start Learning</h3>
+            <p class="text-gray-600">
+              Attend your coaching sessions and implement the strategies you
+              learn.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto text-white text-2xl font-bold"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-bold text-accent mb-3">Achieve Success</h3>
+            <p class="text-gray-600">
+              Watch your real estate portfolio grow and enjoy the financial
+              freedom you deserve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="book-sesson" class="max-w-7xl mx-auto px-4 py-16">
+      <div
+        class="bg-gradient-to-r from-accent to-accent/90 rounded-2xl shadow-2xl p-10 text-white"
+      >
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold mb-4">Book Your Free Consultation</h2>
+          <p class="text-xl text-white/90">
+            Talk to Multi-preneur about your real estate goals - no obligation,
+            just honest advice.
+          </p>
+        </div>
+
+        <form
+          id="consultationForm"
+          class="bg-white rounded-xl p-8 text-gray-700"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2"
+                >Full Name *</label
+              >
+              <input
+                type="text"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                placeholder="John Doe"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2"
+                >Email Address *</label
+              >
+              <input
+                type="email"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                placeholder="john@example.com"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-semibold mb-2"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+                placeholder="+234 XXX XXX XXXX"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-2"
+                >Interested Program</label
+              >
+              <select
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"
+              >
+                <option>Starter Program</option>
+                <option>Growth Program</option>
+                <option>Elite Mastery</option>
+                <option>Custom Package</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-semibold mb-2"
+              >Tell us about your goals and challenges</label
+            >
+            <textarea
+              rows="4"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none resize-none"
+              placeholder="What do you want to achieve with real estate investing?"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-colors"
+          >
+            <i class="fas fa-calendar-check mr-2"></i>Book Free Consultation
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-accent mb-4">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            onclick="toggleFaq(1)"
+            class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50"
+          >
+            <span class="font-bold text-accent"
+              >How is coaching different from training?</span
+            >
+            <i class="fas fa-chevron-down text-primary"></i>
+          </button>
+          <div id="faq-1" class="hidden p-6 pt-0 text-gray-600">
+            Coaching is personalized one-on-one mentorship focused on YOUR
+            specific goals and challenges. Training is group-based learning with
+            a set curriculum. Coaching adapts to your pace and needs.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            onclick="toggleFaq(2)"
+            class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50"
+          >
+            <span class="font-bold text-accent"
+              >Can I upgrade my program later?</span
+            >
+            <i class="fas fa-chevron-down text-primary"></i>
+          </button>
+          <div id="faq-2" class="hidden p-6 pt-0 text-gray-600">
+            Yes! You can upgrade anytime and we'll credit what you've already
+            paid towards the higher program.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            onclick="toggleFaq(3)"
+            class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50"
+          >
+            <span class="font-bold text-accent"
+              >Do you offer payment plans?</span
+            >
+            <i class="fas fa-chevron-down text-primary"></i>
+          </button>
+          <div id="faq-3" class="hidden p-6 pt-0 text-gray-600">
+            Yes, we offer flexible payment plans for all coaching programs.
+            Contact us to discuss options that fit your budget.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md">
+          <button
+            onclick="toggleFaq(4)"
+            class="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50"
+          >
+            <span class="font-bold text-accent"
+              >What if I'm not satisfied?</span
+            >
+            <i class="fas fa-chevron-down text-primary"></i>
+          </button>
+          <div id="faq-4" class="hidden p-6 pt-0 text-gray-600">
+            We offer a 100% money-back guarantee after your first session if
+            you're not completely satisfied. Your success is our priority.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="/js/component.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/coaching.js"></script>
+  </body>
+</html>

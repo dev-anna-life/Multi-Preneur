@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training-Multi-Preneur</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .course-card {
+        transition: all 0.4s ease;
+      }
+      .course-card:hover {
+        transform: translateY(-10px);
+      }
+      .module-item {
+        transition: all 0.3s ease;
+      }
+      .module-item:hover {
+        background-color: rgba(138, 194, 73, 0.05);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div id="navbar-container"></div>
+
+    <section class="bg-primary text-white py-20 px-4 mt-20">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Real Estate Training Courses
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-8">
+          Master real estate investing through comprehensive group training
+          programs with industry experts.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#courses"
+            class="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-lg transition-colors"
+          >
+            <i class="fas fa-graduation-cap mr-2"></i> View Courses
+          </a>
+          <a
+            href="#upcoming"
+            class="bg-white hover:bg-gray-100 text-accent font-bold py-4 px-8 rounded-lg transition-colors"
+          >
+            <i class="fas fa-calendar-alt mr-2"></i> Upcoming Sessions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">2,000+</div>
+          <p class="text-gray-600">Students Trained</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">15+</div>
+          <p class="text-gray-600">Expert Instructors</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">20+</div>
+          <p class="text-gray-600">Training Programs</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+          <div class="text-4xl font-bold text-primary mb-2">98%</div>
+          <p class="text-gray-600">Satisfaction Rate</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl text-accent font-bold mb-4">
+          Why Choose Our Training?
+        </h2>
+        <p class="text-4xl text-gray-600 max-w-3xl mx-auto">
+          Learn from the best and join a community of successful real estate
+          investors
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-chalkboard-teacher text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Expert Instructors</h3>
+          <p class="text-gray-600">
+            Learn from seasoned professionals with decades of combined
+            experience.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-laptop-code text-primary text-3xl"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Practical Learning</h3>
+          <p class="text-gray-600">
+            Hands-on training with real-world examples and case studies.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-users-cog text-primary text-3xl"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Network Support</h3>
+          <p class="text-gray-600">
+            Join a network of like-minded investors for ongoing support and
+            collaboration.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow"
+        >
+          <div
+            class="w-16 h-16 bg-primary/90 rounded-full flex items-center justify-center mb-6 mx-auto"
+          >
+            <i class="fas fa-certificate text-primary text-3xl"></i>
+          </div>
+
+          <h3 class="text-2xl font-bold mb-4">Certification</h3>
+          <p class="text-gray-600">
+            Earn industry-recognized certifications to boost your credibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl text-accent font-bold mb-4">
+            Our Training Programs
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive courses designed to take you from beginner to expert.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Course 1: Real Estate Fundamentals -->
+          <div
+            class="course-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-200"
+          >
+            <div
+              class="bg-gradient-to-r from-primary to-primary/80 p-6 text-white"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-3xl font-bold">Real Estate Fundamentals</h3>
+                <span
+                  class="bg-white/20 border-2 text-accent px-3 py-1 rounded-full text-xs"
+                  >Beginner</span
+                >
+              </div>
+              <p class="text-white/90 mb-4 text-lg">
+                Complete foundation course for aspiring property investors.
+              </p>
+              <div class="flex items-center gap-4 text-sm">
+                <span><i class="fas fa-clock mr-1"></i> 4 Weeks</span>
+                <span><i class="fas fa-users mr-1"></i> Max 20 Students</span>
+                <span
+                  ><i class="fas fa-calendar mr-1"></i> Live + Recorded</span
+                >
+              </div>
+            </div>
+
+            <div class="p-8">
+              <div class="mb-6">
+                <h4 class="font-bold text-accent mb-4 flex items-center">
+                  <i class="fas fa-list-check text-primary mr-2"></i> Course
+                  Modules:
+                </h4>
+                <ul class="space-y-3">
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 1</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Introduction to Real Estate Investing
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Understand the Nigerian property market, types of
+                        properties, and investment opportunities.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 2</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Property EValuation & Analysis
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Learn how to evaluate property values, analyze market
+                        trends, and assess investment potential.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 3</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Legal Framework and Documentation
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        C of O, deeds, contracts, title verification, avoiding
+                        legal pitfalls.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 4</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Your First Investment
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Step-by-step guidance on making your first property
+                        purchase and managing it effectively and closing the
+                        deal.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <h5 class="font-semibold text-accent">What you Get:</h5>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>4 live
+                    interaction sessions (2 hours each)
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Lifetime
+                    access to recorded sessions
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Access to our
+                    exclusive property database
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Post-course
+                    support and mentorship
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Certificate of
+                    completion
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Alumni
+                    Community access and networking
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center justify-between mb-6 pb-6 border-b">
+                <div>
+                  <p class="text-sm text-gray-500">Course Fee</p>
+                  <p class="text-3xl font-bold text-primary">₦150,000</p>
+                  <p class="text-sm text-gray-500 line-through">₦200,000</p>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold"
+                    >Save ₦50K</span
+                  >
+                </div>
+              </div>
+              <button
+                onclick="registerCourse('fundamentals')"
+                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <i class="fas fa-user-graduate mr-2"></i> Register Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Course 2: Property Development Mastery-->
+          <div
+            class="course-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-accent"
+          >
+            <div
+              class="bg-gradient-to-r from-accent to-accent/80 p-6 text-white"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-3xl font-bold">Property Development Mastery</h3>
+                <span
+                  class="bg-white/20 border-2 px-3 py-1 rounded-full text-sm text-accent"
+                  >Advanced</span
+                >
+              </div>
+              <p class="text-white/90 mb-4">
+                Learn to develop profitable real estate projects from scratch
+              </p>
+              <div class="flex items-center gap-4 text-sm">
+                <span><i class="fas fa-clock mr-1"></i> 8 Weeks</span>
+                <span><i class="fas fa-users mr-1"></i> Max 15 Students</span>
+                <span><i class="fas fa-calendar mr-1"></i> Live Only</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <div class="mb-6">
+                <h4 class="font-bold text-accent mb-4 flex items-center">
+                  <i class="fas fa-list-check text-primary mr-2"></i> Course
+                  Modules:
+                </h4>
+                <ul class="space-y-3">
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full mr-3"
+                      >Week 1-2</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Development Planning
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Site selection, feasibility studies, market analysis and
+                        project budgeting.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full mr-3"
+                      >Week 3-4</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Land Acquisition & Approvals
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Finding development sites, due diligence, government
+                        approvals, permits.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full mr-3"
+                      >Week 5-6</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Construction Management
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Hiring contractors, project timelines, quality control,
+                        cost management.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-accent/10 text-accent font-bold px-3 py-1 rounded-full mr-3"
+                      >Week 7-8</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Marketing & Exit Strategy
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Selling vs renting, marketing strategies, working with
+                        agents, exit planning.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <h5 class="font-semibold text-accent mb-3">What you Get:</h5>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>8 intensive
+                    live sessions (3 hours each)
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>In-depth case
+                    studies of successful developments
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Access to
+                    development and financial project templates and tools
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>3 months
+                    post-training support
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Professional
+                    Certificate
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Site visit to
+                    active development
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center justify-between mb-6 pb-6 border-b">
+                <div>
+                  <p class="text-sm text-gray-500">Course Fee</p>
+                  <p class="text-3xl font-bold text-primary">₦350,000</p>
+                  <p class="text-sm text-gray-500 line-through">₦450,000</p>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold"
+                    >Save ₦100K</span
+                  >
+                </div>
+              </div>
+              <button
+                onclick="registerCourse('development')"
+                class="w-full bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <i class="fas fa-user-graduate mr-2"></i> Register Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Course 3: Investment Strategy $ Analysis -->
+          <div
+            class="course-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-200"
+          >
+            <div
+              class="bg-gradient-to-r from-primary to-primary/80 p-6 text-white"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-3xl font-bold">
+                  Investment Strategy & Analysis
+                </h3>
+                <span
+                  class="bg-white/20 border-2 text-accent px-3 py-1 rounded-full text-xs"
+                  >Intermediate</span
+                >
+              </div>
+              <p class="text-white/90 mb-4 text-lg">
+                Master investment analysis and decision-making frameworks.
+              </p>
+              <div class="flex items-center gap-4 text-sm">
+                <span><i class="fas fa-clock mr-1"></i> 6 Weeks</span>
+                <span><i class="fas fa-users mr-1"></i> Max 25 Students</span>
+                <span><i class="fas fa-calendar mr-1"></i> Hybrid</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <div class="mb-6">
+                <h4 class="font-bold text-accent mb-4 flex items-center">
+                  <i class="fas fa-list-check text-primary mr-2"></i> Course
+                  Modules:
+                </h4>
+                <ul class="space-y-3">
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 1-2</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">Market Analysis</h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Analyzing local market conditions, demand-supply
+                        dynamics, and economic indicators.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 3-4</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Financial Modelling
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        ROI calculations, cash flow analysis, property valuation
+                        methods.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="module-item flex items-start p-3 border border-gray-100 rounded-lg"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 5-6</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Risk Management & Exit Planning
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Identifying risks, mitigation strategies, and planning
+                        successful exits.
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-start module-item p-3 rounded-lg border border-gray-100"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 text-sm flex-shrink-0 mr-3"
+                      >Week 6</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Portfolio Building
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Creating balanced portfolios, scaling strategies, wealth
+                        building.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <h5 class="font-semibold text-accent mb-3">What you Get:</h5>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>6 expert-led
+                    sessions (2.5 hours each)
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Excel
+                    financial models & calculators
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Case studies
+                    of successful investments
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Investment
+                    decision framework
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Professional
+                    certification
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Monthly market
+                    reports (6 months)
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex items-center justify-between mb-6 pb-6 border-b">
+                <div>
+                  <p class="text-sm text-gray-500">Course Fee</p>
+                  <p class="text-3xl font-bold text-primary">₦250,000</p>
+                  <p class="text-sm text-gray-500 line-through">₦320,000</p>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold"
+                    >Save ₦70K</span
+                  >
+                </div>
+              </div>
+              <button
+                onclick="registerCourse('strategy')"
+                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <i class="fas fa-user-graduate mr-2"></i> Register Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Course 4: ommerial Real Estate-->
+          <div
+            class="course-card bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-accent"
+          >
+            <div class="absolute top-6 right-6 z-10">
+              <span
+                class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                <i class="fas fa-fire mr-1"></i> Premium
+              </span>
+            </div>
+            <div
+              class="bg-gradient-to-r from-accent to-accent/80 p-6 text-white"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold">Commercial Real Estate</h3>
+                <span
+                  class="bg-white/20 px-3 py-1 border rounded-lg text-accent text-sm"
+                  >Expert</span
+                >
+              </div>
+              <p class="text-white/90 mb-4">
+                Navigate the ommercialproperty landscape with confidence
+              </p>
+              <div class="flex items-center gap-4 text-sm">
+                <span><i class="fas fa-clock mr-1"></i> 10 Weeks</span>
+                <span><i class="fas fa-users mr-1"></i> Max 12 Students</span>
+                <span><i class="fas fa-calendar mr-1"></i> Live Only</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <div class="mb-6">
+                <h4 class="font-bold text-accent mb-4 flex items-center">
+                  <i class="fas fa-list-check text-primary mr-2"></i>
+                  Course Modules:
+                </h4>
+                <ul class="space-y-3">
+                  <li
+                    class="flex items-start module-item p-3 rounded-lg border border-gray-100"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm flex-shrink-0"
+                      >Week 1-2</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Commercial Property Types
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Office, retail, industrail, mixed-use properties and
+                        their dynamics
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-start module-item p-3 rounded-lg border border-gray-100"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm flex-shrink-0"
+                      >Week 3-5</span
+                    >
+                    <div>
+                      <h5 class="font-semiboldtext-accent">
+                        Lease Negotiations
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Commercial lease structures, terms, negotiations, tenant
+                        managemnet
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-start module-item p-3 rounded-lg border border-gray-100"
+                  >
+                    <span
+                      class="bg-primary/90 text-primary font-bold px-3 py-1 rounded mr-3 text-sm flex shrink-0"
+                      >Week 6-8</span
+                    >
+                    <div>
+                      <h5 class="font-semiboldtext-accent">
+                        Commercial Finaning
+                      </h5>
+                      <p class="text-gray-600text-sm mt-1">
+                        Funding sources, loan structures, investor partnerships
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-start module-item p-3 rounded-lg border border-gray-100"
+                  >
+                    <span
+                      class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm flex-shrink-0"
+                      >Week 9-10</span
+                    >
+                    <div>
+                      <h5 class="font-semibold text-accent">
+                        Asset Optimization
+                      </h5>
+                      <p class="text-gray-600 text-sm mt-1">
+                        Maximizing value, property repositioning, exit
+                        strategies
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                <h5 class="font-semibold text-accent mb-3">What You Get:</h5>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>10 intensive
+                    sessions (3 hours each)
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Commercial
+                    property tours
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Lease
+                    agreement templates
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Tenant
+                    screening tools
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>Advanced
+                    certification
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-primary mr-2"></i>6 months
+                    mentorship access
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center justify-between mb-6 pb-6 border-b">
+                <div>
+                  <p class="text-sm text-gray-500">Course Fee</p>
+                  <p class="text-3xl font-bold text-primary">₦500,000</p>
+                  <p class="text-sm text-gray-500 line-through">₦650,000</p>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold"
+                  >
+                    Save ₦150K
+                  </span>
+                </div>
+              </div>
+              <button
+                onclick="registerCourse('commercial')"
+                class="w-full bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <i class="fas fa-user-graduate mr-2"></i>Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-accent mb-4">Upcoming Training Sessions</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Secure your spot in our next batch - limited seats available
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-primary hover:shadow-2xl transition-shadow">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">Beginner</span>
+                                <span class="text-gray-500 text-sm">
+                                    <i class="fas fa-users mr-1"></i>15 spots left
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent mb-2">Real Estate Fundamentals - Batch 12</h3>
+                            <p class="text-gray-600 mb-3">Foundation course for aspiring investors</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                                <span><i class="fas fa-calendar mr-2 text-primary"></i>Starts: March 15, 2026</span>
+                                <span><i class="fas fa-clock mr-2 text-primary"></i>Saturdays, 10AM - 12PM</span>
+                                <span><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Online + Physical (Asaba)</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-3xl font-bold text-primary mb-2">₦150,000</p>
+                            <button onclick="registerCourse('fundamentals')" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-accent hover:shadow-2xl transition-shadow">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold">Intermediate</span>
+                                <span class="text-gray-500 text-sm">
+                                    <i class="fas fa-users mr-1"></i>8 spots left
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent mb-2">Investment Strategy & Analysis - Batch 7</h3>
+                            <p class="text-gray-600 mb-3">Master investment analysis and decision-making</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                                <span><i class="fas fa-calendar mr-2 text-primary"></i>Starts: March 22, 2026</span>
+                                <span><i class="fas fa-clock mr-2 text-primary"></i>Sundays, 2PM - 4:30PM</span>
+                                <span><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Online Only</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-3xl font-bold text-primary mb-2">₦250,000</p>
+                            <button onclick="registerCourse('investment')" class="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border-l-4 border-primary hover:shadow-2xl transition-shadow">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">Advanced</span>
+                                <span class="text-gray-500 text-sm">
+                                    <i class="fas fa-users mr-1"></i>12 spots left
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent mb-2">Property Development Mastery - Batch 5</h3>
+                            <p class="text-gray-600 mb-3">Learn to develop profitable real estate projects</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                                <span><i class="fas fa-calendar mr-2 text-primary"></i>Starts: April 5, 2026</span>
+                                <span><i class="fas fa-clock mr-2 text-primary"></i>Saturdays, 9AM - 12PM</span>
+                                <span><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Physical Only (Enugu)</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-3xl font-bold text-primary mb-2">₦350,000</p>
+                            <button onclick="registerCourse('development')" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Register Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <p class="text-gray-600 mb-4">Can't find a suitable date?</p>
+            <button onclick="contactSchedule()" class="bg-accent hover:bg-accent/90 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                <i class="fas fa-envelope mr-2"></i>Request Custom Schedule
+            </button>
+        </div>
+    </section>
+
+
+    <section class="bg-gradient-to-br from-primary to-primary/90 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">What Makes Our Training Different?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-infinity text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lifetime Access</h3>
+                    <p class="text-white/80">Access course materials forever, review anytime you need</p>
+                </div>
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-handshake text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Post-Training Support</h3>
+                    <p class="text-white/80">Continued guidance even after course completion</p>
+                </div>
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Alumni Community</h3>
+                    <p class="text-white/80">Join 2000+ successful investors in our network</p>
+                </div>
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-briefcase text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Real Case Studies</h3>
+                    <p class="text-white/80">Learn from actual deals and real-world scenarios</p>
+                </div>
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Templates & Tools</h3>
+                    <p class="text-white/80">Get practical templates you can use immediately</p>
+                </div>
+                <div class="text-center text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-award text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Recognized Certificate</h3>
+                    <p class="text-white/80">Industry-recognized certification to boost credibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="bg-gradient-to-r from-accent to-accent/90 rounded-2xl shadow-2xl p-12 text-center text-white">
+            <h2 class="text-4xl font-bold mb-6">Ready to Start Your Training?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Join thousands of successful students and transform your real estate knowledge
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#courses" class="bg-white text-accent hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-colors">
+                    <i class="fas fa-graduation-cap mr-2"></i>Browse Courses
+                </a>
+                <a href="../pages/contact.html" class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-colors">
+                    <i class="fas fa-envelope mr-2"></i>Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="/js/component.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/training.js"></script>
+  </body>
+</html>

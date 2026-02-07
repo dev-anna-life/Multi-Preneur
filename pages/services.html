@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Multi-Preneur</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-item {
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            background-color: rgba(138, 194, 73, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="navbar-container"></div>
+
+    <section class="bg-[#8ac249] text-white py-20 px-4 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Our Services
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
+                Comprehensive real estate solutions tailored to help you succeed in the Nigerian property market
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 mt-12">
+        <div class="bg-white rounded-xl shadow-lg p-2 flex flex-wrap justify-center gap-2">
+            <button onclick="showService('properties')" id="btn-properties" class="service-tab px-8 py-3 rounded-lg font-semibold transition-all duration-300 bg-primary text-white">
+                <i class="fas fa-home mr-2"></i>Properties
+            </button>
+            <button onclick="showService('coaching')" id="btn-coaching" class="service-tab px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-user-tie mr-2"></i>Coaching
+            </button>
+            <button onclick="showService('training')" id="btn-training" class="service-tab px-8 py-3 rounded-lg font-semibold transition-all duration-300 text-gray-700 hover:bg-gray-100">
+                <i class="fas fa-graduation-cap mr-2"></i>Training
+            </button>
+        </div>
+    </section>
+
+    <section id="properties-section" class="service-section max-w-7xl mx-auto px-4 py-16">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-accent mb-4">Property Services</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                From buying to selling, we provide end-to-end real estate solutions
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-tag text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Property Sales</h3>
+                <p class="text-gray-600 mb-6">Expert assistance in buying and selling residential and commercial properties across Nigeria.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Verified listings database</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Property valuation services</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Negotiation support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Legal documentation assistance</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-key text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Property Rentals</h3>
+                <p class="text-gray-600 mb-6">Find the perfect rental property or lease your property to quality tenants.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Tenant screening & verification</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Rental agreement preparation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Property inspection services</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Rent collection management</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-building text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Property Management</h3>
+                <p class="text-gray-600 mb-6">Comprehensive property management services to maximize your investment returns.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>24/7 maintenance coordination</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Financial reporting & analytics</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Tenant relationship management</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Property improvement planning</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-map-marked-alt text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Land Acquisition</h3>
+                <p class="text-gray-600 mb-6">Secure prime land parcels with verified titles and strategic locations.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Title verification & due diligence</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Survey & documentation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Government approval processing</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Land banking opportunities</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Investment Advisory</h3>
+                <p class="text-gray-600 mb-6">Strategic guidance to maximize returns on your real estate investments.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Market analysis & research</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>ROI projections & modeling</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Portfolio diversification strategy</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Exit strategy planning</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-search text-primary text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Property Inspection</h3>
+                <p class="text-gray-600 mb-6">Thorough property inspections to ensure you make informed decisions.</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Structural integrity assessment</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Detailed inspection reports</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Defect identification</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-primary mr-3 mt-1"></i>
+                        <span>Repair cost estimation</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent to-accent/90 rounded-2xl shadow-2xl p-12 text-white">
+            <h3 class="text-3xl font-bold mb-8 text-center">Why Choose Our Property Services?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">5+ Years Experience</h4>
+                    <p class="text-white/80">Proven track record in Nigerian real estate</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">1000+ Happy Clients</h4>
+                    <p class="text-white/80">Trusted by thousands across Nigeria</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-award text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Verified Properties</h4>
+                    <p class="text-white/80">All listings thoroughly vetted</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-headset text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">24/7 Support</h4>
+                    <p class="text-white/80">Always here when you need us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coaching-section" class="service-section hidden max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-accent mb-4">Real Estate Coaching</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Personalized one-on-one coaching to accelerate your real estate career
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-seedling text-primary text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent">Beginner's Program</h3>
+                        <p class="text-gray-500">Perfect for newcomers</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Start your real estate journey with expert guidance and foundational knowledge.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-bold text-accent mb-3 flex items-center">
+                        <i class="fas fa-book text-primary mr-2"></i>
+                        What You'll Learn:
+                    </h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Real estate fundamentals & market dynamics</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Property identification & evaluation</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Legal requirements & documentation</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>First property purchase strategy</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Risk management basics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t pt-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-gray-600"><i class="fas fa-clock mr-2"></i>8 weeks</span>
+                        <span class="text-gray-600"><i class="fas fa-video mr-2"></i>Weekly sessions</span>
+                    </div>
+                    <a href="../pages/coaching.html" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                        Enroll Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl border-2 border-primary">
+                <div class="absolute top-4 right-4">
+                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                </div>
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-rocket text-primary text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent">Growth Program</h3>
+                        <p class="text-gray-500">Scale your portfolio</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Advanced strategies to expand your real estate portfolio and increase returns.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-bold text-accent mb-3 flex items-center">
+                        <i class="fas fa-book text-primary mr-2"></i>
+                        What You'll Learn:
+                    </h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Advanced investment strategies</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Portfolio diversification techniques</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Property development insights</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Wealth building through real estate</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Network building & partnerships</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t pt-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-gray-600"><i class="fas fa-clock mr-2"></i>12 weeks</span>
+                        <span class="text-gray-600"><i class="fas fa-video mr-2"></i>Bi-weekly sessions</span>
+                    </div>
+                    <a href="../pages/contact.html" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                        Enroll Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Advanced Coaching -->
+            <div class="service-card bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-crown text-primary text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent">Elite Mastery</h3>
+                        <p class="text-gray-500">For experienced investors</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Elite-level coaching for serious investors looking to dominate the market.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-bold text-accent mb-3 flex items-center">
+                        <i class="fas fa-book text-primary mr-2"></i>
+                        What You'll Learn:
+                    </h4>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Large-scale investment strategies</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Commercial real estate mastery</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Syndication & joint ventures</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Tax optimization strategies</span>
+                        </li>
+                        <li class="flex items-start feature-item p-2 rounded">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Building a real estate empire</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t pt-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-gray-600"><i class="fas fa-clock mr-2"></i>16 weeks</span>
+                        <span class="text-gray-600"><i class="fas fa-video mr-2"></i>Weekly sessions</span>
+                    </div>
+                    <a href="../pages/contact.html" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                        Enroll Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Custom Coaching -->
+            <div class="service-card bg-gradient-to-br from-accent to-accent/90 rounded-xl shadow-lg p-8 hover:shadow-2xl text-white">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-check text-white text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Custom Coaching</h3>
+                        <p class="text-white/80">Tailored to your needs</p>
+                    </div>
+                </div>
+                <p class="text-white/90 mb-6">Get personalized coaching designed specifically for your unique goals and challenges.</p>
+                
+                <div class="mb-6">
+                    <h4 class="font-bold mb-3 flex items-center">
+                        <i class="fas fa-star text-primary mr-2"></i>
+                        Features:
+                    </h4>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start p-2 rounded hover:bg-white/10">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Personalized curriculum</span>
+                        </li>
+                        <li class="flex items-start p-2 rounded hover:bg-white/10">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Flexible scheduling</span>
+                        </li>
+                        <li class="flex items-start p-2 rounded hover:bg-white/10">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Direct mentor access</span>
+                        </li>
+                        <li class="flex items-start p-2 rounded hover:bg-white/10">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Deal analysis support</span>
+                        </li>
+                        <li class="flex items-start p-2 rounded hover:bg-white/10">
+                            <i class="fas fa-arrow-right text-primary mr-3 mt-1"></i>
+                            <span>Lifetime community access</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-white/20 pt-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-white/90"><i class="fas fa-clock mr-2"></i>Flexible duration</span>
+                        <span class="text-white/90"><i class="fas fa-video mr-2"></i>Your schedule</span>
+                    </div>
+                    <a href="../pages/contact.html" class="block text-center bg-white text-accent hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-12">
+            <h3 class="text-3xl font-bold text-accent mb-8 text-center">What's Included in All Programs</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">One-on-One Sessions</h4>
+                        <p class="text-gray-600">Personalized coaching tailored to your goals</p>
+                    </div>
+                </div>
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">Resource Library</h4>
+                        <p class="text-gray-600">Access to templates, guides, and tools</p>
+                    </div>
+                </div>
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">Community Access</h4>
+                        <p class="text-gray-600">Network with fellow investors</p>
+                    </div>
+                </div>
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">Email Support</h4>
+                        <p class="text-gray-600">Get answers between sessions</p>
+                    </div>
+                </div>
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">Progress Tracking</h4>
+                        <p class="text-gray-600">Monitor your growth and achievements</p>
+                    </div>
+                </div>
+                <div class="flex items-start feature-item p-4 rounded-lg">
+                    <i class="fas fa-check-circle text-primary text-2xl mr-4 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-accent mb-2">Completion Certificate</h4>
+                        <p class="text-gray-600">Recognized certification upon completion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training-section" class="service-section hidden max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-accent mb-4">Real Estate Training Programs</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive group training courses to master real estate investing
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <!-- Beginner Training -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-primary to-primary/80 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Real Estate Fundamentals</h3>
+                    <p class="text-white/90">Foundation course for aspiring investors</p>
+                    <div class="mt-4 flex items-center gap-4">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">4 Weeks</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Live + Recorded</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Certificate</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h4 class="font-bold text-accent mb-4 flex items-center">
+                        <i class="fas fa-list-check text-primary mr-2"></i>
+                        Course Modules:
+                    </h4>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">01</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Introduction to Real Estate</h5>
+                                <p class="text-gray-600 text-sm">Understanding the Nigerian property market</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">02</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Property Types & Analysis</h5>
+                                <p class="text-gray-600 text-sm">Evaluating different property categories</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">03</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Legal Framework</h5>
+                                <p class="text-gray-600 text-sm">Documentation and legal requirements</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">04</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Your First Investment</h5>
+                                <p class="text-gray-600 text-sm">Step-by-step property purchase guide</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="border-t pt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-accent">₦150,000</span>
+                            <span class="text-gray-500 line-through">₦200,000</span>
+                        </div>
+                        <a href="../pages/contact.html" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Development Training -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-accent to-accent/80 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Property Development Mastery</h3>
+                    <p class="text-white/90">Learn to develop profitable real estate projects</p>
+                    <div class="mt-4 flex items-center gap-4">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">8 Weeks</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Live Sessions</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Certificate</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h4 class="font-bold text-accent mb-4 flex items-center">
+                        <i class="fas fa-list-check text-primary mr-2"></i>
+                        Course Modules:
+                    </h4>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">01</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Development Planning</h5>
+                                <p class="text-gray-600 text-sm">From concept to feasibility study</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">02</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Land Acquisition</h5>
+                                <p class="text-gray-600 text-sm">Finding and securing development sites</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">03</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Construction Management</h5>
+                                <p class="text-gray-600 text-sm">Managing contractors and timelines</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">04</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Sales & Exit Strategy</h5>
+                                <p class="text-gray-600 text-sm">Marketing and selling developed properties</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="border-t pt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-accent">₦350,000</span>
+                            <span class="text-gray-500 line-through">₦450,000</span>
+                        </div>
+                        <a href="../pages/contact.html" class="block text-center bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Strategy Training -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-primary to-primary/80 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Investment Strategy & Analysis</h3>
+                    <p class="text-white/90">Master investment analysis and decision-making</p>
+                    <div class="mt-4 flex items-center gap-4">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">6 Weeks</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Hybrid</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Certificate</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h4 class="font-bold text-accent mb-4 flex items-center">
+                        <i class="fas fa-list-check text-primary mr-2"></i>
+                        Course Modules:
+                    </h4>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">01</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Market Analysis</h5>
+                                <p class="text-gray-600 text-sm">Reading trends and identifying opportunities</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">02</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Financial Modeling</h5>
+                                <p class="text-gray-600 text-sm">ROI calculations and projections</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">03</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Risk Management</h5>
+                                <p class="text-gray-600 text-sm">Identifying and mitigating investment risks</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">04</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Portfolio Building</h5>
+                                <p class="text-gray-600 text-sm">Creating a balanced investment portfolio</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="border-t pt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-accent">₦250,000</span>
+                            <span class="text-gray-500 line-through">₦320,000</span>
+                        </div>
+                        <a href="../pages/contact.html" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Real Estate Training -->
+            <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl border-2 border-accent">
+                <div class="absolute top-4 right-4 z-10">
+                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">Advanced</span>
+                </div>
+                <div class="bg-gradient-to-r from-accent to-accent/80 p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-2">Commercial Real Estate</h3>
+                    <p class="text-white/90">Navigate the commercial property landscape</p>
+                    <div class="mt-4 flex items-center gap-4">
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">10 Weeks</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Expert-led</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Certificate</span>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h4 class="font-bold text-accent mb-4 flex items-center">
+                        <i class="fas fa-list-check text-primary mr-2"></i>
+                        Course Modules:
+                    </h4>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">01</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Commercial Property Types</h5>
+                                <p class="text-gray-600 text-sm">Office, retail, industrial properties</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">02</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Lease Negotiations</h5>
+                                <p class="text-gray-600 text-sm">Commercial lease structures and terms</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">03</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Tenant Management</h5>
+                                <p class="text-gray-600 text-sm">Building long-term business relationships</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start feature-item p-3 rounded-lg">
+                            <span class="bg-primary/10 text-primary font-bold px-3 py-1 rounded mr-3 text-sm">04</span>
+                            <div>
+                                <h5 class="font-semibold text-accent">Asset Optimization</h5>
+                                <p class="text-gray-600 text-sm">Maximizing commercial property value</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="border-t pt-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-accent">₦500,000</span>
+                            <span class="text-gray-500 line-through">₦650,000</span>
+                        </div>
+                        <a href="../pages/contact.html" class="block text-center bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-primary to-primary/90 rounded-2xl shadow-2xl p-12 text-white mb-12">
+            <h3 class="text-3xl font-bold mb-8 text-center">Training Program Benefits</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chalkboard-teacher text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Expert Instructors</h4>
+                    <p class="text-white/80">Learn from experienced real estate professionals</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-laptop-code text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Practical Projects</h4>
+                    <p class="text-white/80">Real-world case studies and assignments</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-users-cog text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Peer Network</h4>
+                    <p class="text-white/80">Connect with fellow aspiring investors</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-certificate text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Certification</h4>
+                    <p class="text-white/80">Industry-recognized certificate upon completion</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-infinity text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Lifetime Access</h4>
+                    <p class="text-white/80">Access course materials anytime, anywhere</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-handshake text-4xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Post-Training Support</h4>
+                    <p class="text-white/80">Ongoing mentorship and guidance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Classes -->
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-3xl font-bold text-accent">Upcoming Training Sessions</h3>
+                <a href="../pages/training.html" class="text-primary hover:text-accent font-semibold">
+                    View All <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="space-y-4">
+                <div class="border-l-4 border-primary bg-gray-50 p-6 rounded-r-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-accent mb-2">Real Estate Fundamentals</h4>
+                            <p class="text-gray-600 mb-2">Foundation course for aspiring investors</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-calendar mr-2"></i>Starts: March 15, 2026</span>
+                                <span><i class="fas fa-users mr-2"></i>15 spots left</span>
+                            </div>
+                        </div>
+                        <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">₦150,000</span>
+                    </div>
+                </div>
+                <div class="border-l-4 border-accent bg-gray-50 p-6 rounded-r-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-accent mb-2">Investment Strategy & Analysis</h4>
+                            <p class="text-gray-600 mb-2">Master investment analysis and decision-making</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-calendar mr-2"></i>Starts: March 22, 2026</span>
+                                <span><i class="fas fa-users mr-2"></i>8 spots left</span>
+                            </div>
+                        </div>
+                        <span class="bg-accent text-white px-4 py-2 rounded-lg font-semibold">₦250,000</span>
+                    </div>
+                </div>
+                <div class="border-l-4 border-primary bg-gray-50 p-6 rounded-r-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-accent mb-2">Property Development Mastery</h4>
+                            <p class="text-gray-600 mb-2">Learn to develop profitable real estate projects</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-calendar mr-2"></i>Starts: April 5, 2026</span>
+                                <span><i class="fas fa-users mr-2"></i>12 spots left</span>
+                            </div>
+                        </div>
+                        <span class="bg-primary text-white px-4 py-2 rounded-lg font-semibold">₦350,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="bg-gradient-to-r from-accent via-accent/95 to-accent text-white rounded-2xl shadow-2xl p-12 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Whether you're looking for properties, coaching, or training, we're here to help you succeed in real estate.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../pages/contact.html" class="bg-white text-accent hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i>Contact Us
+                </a>
+                <a href="tel:+2347048322531" class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="/js/component.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/services.js"></script>
+</body>
+</html>
