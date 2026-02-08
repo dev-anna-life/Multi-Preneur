@@ -19,13 +19,13 @@ const NavbarTemplate = `
 
             <!-- Services Dropdown -->
             <div class="group relative">
-               <button class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300 cursor-pointer">
-                Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
-            </button>
-                <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block">
-                    <a href="/Multi-Preneur/pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
-                    <a href="/Multi-Preneur/pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
-                    <a href="/Multi-Preneur/pages/training.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Training</a>
+                <a href="/Multi-Preneur/pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
+                    Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
+                </a>
+                <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[200px]">
+                    <a href="/Multi-Preneur/pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f] transition-colors">Properties</a>
+                    <a href="/Multi-Preneur/pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f] transition-colors">Coaching</a>
+                    <a href="/Multi-Preneur/pages/training.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f] transition-colors">Training</a>
                 </div>
             </div>
 
@@ -43,9 +43,12 @@ const NavbarTemplate = `
 
         <!-- Services with sub-items -->
         <div>
-            <button id="services-toggle" class="block py-2 font-semibold w-full text-left text-white flex items-center justify-between">
-                Services <i id="chevron-icon" class="fas fa-chevron-down ml-1 transition-transform duration-200"></i>
-            </button>
+            <div class="flex items-center justify-between">
+                <a href="/Multi-Preneur/pages/service.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300 flex-1">Services</a>
+                <button id="services-toggle" class="py-2 px-3 text-white hover:text-[#8ac249] transition-colors duration-300">
+                    <i id="chevron-icon" class="fas fa-chevron-down transition-transform duration-200"></i>
+                </button>
+            </div>
             <div id="services-dropdown" class="hidden pl-4 border-l border-[#8ac249]">
                 <a href="/Multi-Preneur/pages/properties.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Properties</a>
                 <a href="/Multi-Preneur/pages/coaching.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Coaching</a>
@@ -151,21 +154,26 @@ function loadComponents() {
 
 function initializeMobileMenu() {
   console.log("Initializing mobile menu...");
-  
+
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");
   const servicesToggle = document.getElementById("services-toggle");
   const servicesDropdown = document.getElementById("services-dropdown");
   const chevronIcon = document.getElementById("chevron-icon");
 
-  console.log("Elements found:", { hamburger, mobileMenu, servicesToggle, servicesDropdown, chevronIcon });
+  console.log("Elements found:", {
+    hamburger,
+    mobileMenu,
+    servicesToggle,
+    servicesDropdown,
+    chevronIcon,
+  });
 
   // Mobile hamburger menu
   if (hamburger && mobileMenu) {
-    // Remove any existing event listeners
     const newHamburger = hamburger.cloneNode(true);
     hamburger.parentNode.replaceChild(newHamburger, hamburger);
-    
+
     newHamburger.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -174,20 +182,19 @@ function initializeMobileMenu() {
     });
   }
 
-  // Services dropdown in mobile menu
+  // Services dropdown toggle (ONLY the button, not the link)
   if (servicesToggle && servicesDropdown) {
     const newServicesToggle = servicesToggle.cloneNode(true);
     servicesToggle.parentNode.replaceChild(newServicesToggle, servicesToggle);
-    
-    // Get the new chevron icon after cloning
+
     const newChevronIcon = document.getElementById("chevron-icon");
-    
+
     newServicesToggle.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      console.log("Services toggle clicked!");
+      console.log("Services dropdown toggle clicked!");
       servicesDropdown.classList.toggle("hidden");
-      
+
       if (newChevronIcon) {
         newChevronIcon.classList.toggle("rotate-180");
       }
@@ -199,7 +206,10 @@ function initializeMobileMenu() {
     const mobileLinks = mobileMenu.querySelectorAll("a");
     mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+        // Don't close if clicking the "Services" parent link
+        if (!link.textContent.trim().startsWith("Services")) {
+          mobileMenu.classList.add("hidden");
+        }
       });
     });
   }
@@ -217,8 +227,8 @@ document.addEventListener("click", (e) => {
       mobileMenu.classList.toggle("hidden");
     }
   }
-  
-  // Services toggle - handle clicks on button OR icon
+
+  // Services toggle button ONLY (not the link)
   if (e.target.closest("#services-toggle")) {
     e.preventDefault();
     e.stopPropagation();
@@ -232,8 +242,8 @@ document.addEventListener("click", (e) => {
       }
     }
   }
-  
-  // Close mobile menu when clicking dropdown links
+
+  // Close mobile menu when clicking dropdown links (but not Services main link)
   if (e.target.matches("#services-dropdown a")) {
     const mobileMenu = document.getElementById("mobile-menu");
     if (mobileMenu) {
