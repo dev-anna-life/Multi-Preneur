@@ -42,32 +42,32 @@
     {
       "name": "Millennium Gardens, Ibusa",
       "location": "Asaba",
-      "image": "../images/Millennium-Gardens-Ibusa-1.png"
+      "image": "./images/Millennium-Gardens-Ibusa-1.png"
     },
     {
       "name": "Elegance Havana",
       "location": "Asaba",
-      "image": "../images/Elegance Havana 2.jpg"
+      "image": "./images/Elegance Havana 2.jpg"
     },
     {
       "name": "Diaspora Estate",
       "location": "Asaba",
-      "image": "../images/Diaspora Estate 3.jpg"
+      "image": "./images/Diaspora Estate 3.jpg"
     },
     {
       "name": "Elegance Plus",
       "location": "Asaba",
-      "image": "../images/Elegance Plus 4.jpg"
+      "image": "./images/Elegance Plus 4.jpg"
     },
     {
       "name": "Twin Town Estate",
       "location": "Asaba",
-      "image": "../images/Twin Town Estate 5.jpg"
+      "image": "./images/Twin Town Estate 5.jpg"
     },
     {
       "name": "Jaynes Legacy",
       "location": "Asaba",
-      "image": "../images/Jaynes Legacy 6.jpg"
+      "image": "./images/Jaynes Legacy 6.jpg"
     }
   ],
   "stats": [
