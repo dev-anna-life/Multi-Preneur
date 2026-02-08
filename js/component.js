@@ -95,19 +95,19 @@ const FooterTemplate = `
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-square-instagram text-xl text-[#8ac249]"></i>
-                    <a href="https://www.instagram.com/eponixproperties?" class="hover:text-[#8ac249] text-[18px] transition-colors duration-300">Instagram</a>
+                    <a href="https://www.instagram.com/mrmultiprenuer" class="hover:text-[#8ac249] text-[18px] transition-colors duration-300">Instagram</a>
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-x-twitter text-xl text-[#8ac249]"></i>
-                    <a href="#" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">Twitter</a>
+                    <a href="https://x.com/mrmultiprenuer?s=21" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">Twitter</a>
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-linkedin text-xl text-[#8ac249]"></i>
-                    <a href="#" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">LinkedIn</a>
+                    <a href="www.linkedin.com/in/harrison-ugochukwu-mrmultiprenuer" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">LinkedIn</a>
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-youtube text-xl text-[#8ac249]"></i>
-                    <a href="#" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">YouTube</a>
+                    <a href="https://youtube.com/@harrison_ugochukwu?si=0oGwpqwQVYMdyWyo" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">YouTube</a>
                 </li>
             </ul>
         </div>
