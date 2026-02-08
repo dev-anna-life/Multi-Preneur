@@ -44,7 +44,7 @@ const NavbarTemplate = `
         <!-- Services with sub-items -->
         <div>
             <div class="flex items-center justify-between">
-                <a href="/Multi-Preneur/pages/service.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300 flex-1">Services</a>
+                <a href="pages\services.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300 flex-1">Services</a>
                 <button id="services-toggle" class="py-2 px-3 text-white hover:text-[#8ac249] transition-colors duration-300">
                     <i id="chevron-icon" class="fas fa-chevron-down transition-transform duration-200"></i>
                 </button>
