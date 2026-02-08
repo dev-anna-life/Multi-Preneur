@@ -4,7 +4,7 @@ const NavbarTemplate = `
     <div class="w-full px-4 py-3 flex justify-between items-center">
         <!-- Logo -->
         <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}">
-            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : './images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
+            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : '/Multi-Preneur/images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
         </a>
 
         <!-- Hamburger Icon -->
@@ -15,31 +15,31 @@ const NavbarTemplate = `
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex space-x-6 items-center text-[20px]">
             <a href="./index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
-            <a href="./pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
+            <a href="/Multi-Preneur/pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
             <!-- Services Dropdown -->
             <div class="group relative">
-                <a href="./pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
+                <a href="/Multi-Preneur/pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
                     Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
                 </a>
                 <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block">
-                    <a href="./pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
-                    <a href="./pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
-                    <a href="./pages/training.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Training</a>
+                    <a href="/Multi-Preneur/pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
+                    <a href="/Multi-Preneur/pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
+                    <a href="/Multi-Preneur/pages/training.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Training</a>
                 </div>
             </div>
 
-            <a href="./pages/work.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
-            <a href="./pages/contact.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
-            <a href="./pages/blog.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
-            <a href="./pages/dashboard.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
+            <a href="/Multi-Preneur/pages/work.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
+            <a href="/Multi-Preneur/pages/contact.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
+            <a href="/Multi-Preneur/pages/blog.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
+            <a href="/Multi-Preneur/pages/dashboard.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
         </nav>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#29437f] w-full px-6 pb-4 text-lg shadow-md border-t border-[#8ac249]">
         <a href="./index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
-        <a href="./pages/about.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
+        <a href="/Multi-Preneur/pages/about.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
         <!-- Services with sub-items -->
         <div>
@@ -47,16 +47,16 @@ const NavbarTemplate = `
                 Services <i id="chevron-icon" class="fas fa-chevron-down ml-1 transition-transform duration-200"></i>
             </button>
             <div id="services-dropdown" class="hidden pl-4 border-l border-[#8ac249]">
-                <a href="./pages/properties.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Properties</a>
-                <a href="./pages/coaching.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Coaching</a>
-                <a href="./pages/training.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Training</a>
+                <a href="/Multi-Preneur/pages/properties.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Properties</a>
+                <a href="/Multi-Preneur/pages/coaching.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Coaching</a>
+                <a href="/Multi-Preneur/pages/training.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">• Training</a>
             </div>
         </div>
 
-        <a href="./pages/work.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
-        <a href="./pages/contact.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
-        <a href="./pages/blog.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
-        <a href="./pages/dashboard.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
+        <a href="/Multi-Preneur/pages/work.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Work with Us</a>
+        <a href="/Multi-Preneur/pages/contact.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Contact</a>
+        <a href="/Multi-Preneur/pages/blog.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Blog</a>
+        <a href="/Multi-Preneur/pages/dashboard.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Dashboard</a>
     </div>
 </header>`;
 
