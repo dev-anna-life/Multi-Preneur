@@ -19,7 +19,7 @@ const NavbarTemplate = `
 
             <!-- Services Dropdown -->
             <div class="group relative">
-                <a href="/Multi-Preneur/pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
+                <a href="/Multi-Preneur/pages/services.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
                     Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
                 </a>
                 <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 min-w-[200px]">
@@ -44,7 +44,7 @@ const NavbarTemplate = `
         <!-- Services with sub-items -->
         <div>
             <div class="flex items-center justify-between">
-                <a href="pages\services.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300 flex-1">Services</a>
+                <a href="/Multi-Preneur/pages/services.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300 flex-1">Services</a>
                 <button id="services-toggle" class="py-2 px-3 text-white hover:text-[#8ac249] transition-colors duration-300">
                     <i id="chevron-icon" class="fas fa-chevron-down transition-transform duration-200"></i>
                 </button>
