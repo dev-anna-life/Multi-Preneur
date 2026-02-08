@@ -82,5 +82,5 @@ function filterProperties() {
         }
 
                 function contactAgent() {
-            window.location.href = '/contact.html';
+            window.location.href = '/Multi-Preneur/pages/contact.html';
         }
