@@ -103,7 +103,7 @@ const FooterTemplate = `
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-linkedin text-xl text-[#8ac249]"></i>
-                    <a href="www.linkedin.com/in/harrison-ugochukwu-mrmultiprenuer" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/harrison-ugochukwu-mrmultiprenuer?" class="hover:text-[#8ac249] text-[20px] transition-colors duration-300">LinkedIn</a>
                 </li>
                 <li class="flex items-center space-x-3">
                     <i class="fa-brands fa-youtube text-xl text-[#8ac249]"></i>
