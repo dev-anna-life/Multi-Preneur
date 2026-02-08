@@ -4,7 +4,7 @@ const NavbarTemplate = `
     <div class="w-full px-4 py-3 flex justify-between items-center">
         <!-- Logo -->
         <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}">
-            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : '/Multi-Preneur/images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
+            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : '/images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
         </a>
 
         <!-- Hamburger Icon -->
