@@ -3,8 +3,8 @@ const NavbarTemplate = `
 <header class="fixed top-0 left-0 shadow-md w-full z-50 bg-[#29437f]">
     <div class="w-full px-4 py-3 flex justify-between items-center">
         <!-- Logo -->
-        <a href="${window.location.pathname.includes('/pages/') ? '../index.html' : './index.html'}">
-            <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : '/Multi-Preneur/images/logo.svg'}" alt="Realtor Harry Logo" class="w-28">
+        <a href="${window.location.pathname.includes("/pages/") ? "../index.html" : "./index.html"}">
+            <img src="${window.location.pathname.includes("/pages/") ? "../images/logo.svg" : "/Multi-Preneur/images/logo.svg"}" alt="Realtor Harry Logo" class="w-28">
         </a>
 
         <!-- Hamburger Icon -->
@@ -14,14 +14,14 @@ const NavbarTemplate = `
 
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex space-x-6 items-center text-[20px]">
-            <a href="./index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+            <a href="/Multi-Preneur/index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
             <a href="/Multi-Preneur/pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
             <!-- Services Dropdown -->
             <div class="group relative">
-                <a href="/Multi-Preneur/pages/service.html" class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300">
-                    Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
-                </a>
+               <button class="text-white hover:text-[#8ac249] flex items-center transition-colors duration-300 cursor-pointer">
+                Services <span class="ml-1"><i class="fas fa-chevron-down"></i></span>
+            </button>
                 <div class="absolute left-0 mt-2 bg-white border rounded-md shadow-lg hidden group-hover:block">
                     <a href="/Multi-Preneur/pages/properties.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Properties</a>
                     <a href="/Multi-Preneur/pages/coaching.html" class="block px-4 py-2 hover:bg-gray-100 text-[#29437f]">Coaching</a>
@@ -38,7 +38,7 @@ const NavbarTemplate = `
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#29437f] w-full px-6 pb-4 text-lg shadow-md border-t border-[#8ac249]">
-        <a href="./index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+        <a href="/Multi-Preneur/index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
         <a href="/Multi-Preneur/pages/about.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
         <!-- Services with sub-items -->
@@ -67,7 +67,7 @@ const FooterTemplate = `
             <!-- Logo + Description -->
             <div class="flex-1">
                 <div class="flex items-center mb-4">
-                    <img src="${window.location.pathname.includes('/pages/') ? '../images/logo.svg' : './images/logo.svg'}" alt="Logo" class="h-12 w-auto mr-2 mb-3">
+                    <img src="${window.location.pathname.includes("/pages/") ? "../images/logo.svg" : "./images/logo.svg"}" alt="Logo" class="h-12 w-auto mr-2 mb-3">
                     <span class="text-xl font-bold text-white">Multi-<span class="text-[#8ac249]">Preneur</span></span>
                 </div>
                 <p class="text-sm leading-relaxed max-w-sm mb-4 text-[18px]">Mr Multi-Preneur is dedicated to understanding your unique needs. With years of sales and mentorship, he's empowered thousands in Nigeria to achieve homeownership confidently.</p>
@@ -121,10 +121,10 @@ const FooterTemplate = `
 
 function loadComponents() {
   console.log("Loading components...");
-  
-  const existingHeader = document.querySelector('header');
-  const existingFooter = document.querySelector('footer');
-  
+
+  const existingHeader = document.querySelector("header");
+  const existingFooter = document.querySelector("footer");
+
   if (existingHeader) {
     existingHeader.remove();
   }
@@ -133,12 +133,15 @@ function loadComponents() {
   }
 
   // Create and insert navbar at the top of body
-  const navbarContainer = document.createElement('div');
+  const navbarContainer = document.createElement("div");
   navbarContainer.innerHTML = NavbarTemplate;
-  document.body.insertBefore(navbarContainer.firstElementChild, document.body.firstChild);
+  document.body.insertBefore(
+    navbarContainer.firstElementChild,
+    document.body.firstChild,
+  );
 
   // Create and insert footer at the end of body
-  const footerContainer = document.createElement('div');
+  const footerContainer = document.createElement("div");
   footerContainer.innerHTML = FooterTemplate;
   document.body.appendChild(footerContainer.firstElementChild);
 
@@ -163,21 +166,31 @@ function initializeMobileMenu() {
     const newHamburger = hamburger.cloneNode(true);
     hamburger.parentNode.replaceChild(newHamburger, hamburger);
     
-    newHamburger.addEventListener("click", () => {
+    newHamburger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       console.log("Hamburger clicked!");
       mobileMenu.classList.toggle("hidden");
     });
   }
 
   // Services dropdown in mobile menu
-  if (servicesToggle && servicesDropdown && chevronIcon) {
+  if (servicesToggle && servicesDropdown) {
     const newServicesToggle = servicesToggle.cloneNode(true);
     servicesToggle.parentNode.replaceChild(newServicesToggle, servicesToggle);
     
-    newServicesToggle.addEventListener("click", () => {
+    // Get the new chevron icon after cloning
+    const newChevronIcon = document.getElementById("chevron-icon");
+    
+    newServicesToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       console.log("Services toggle clicked!");
       servicesDropdown.classList.toggle("hidden");
-      chevronIcon.classList.toggle("rotate-180");
+      
+      if (newChevronIcon) {
+        newChevronIcon.classList.toggle("rotate-180");
+      }
     });
   }
 
@@ -195,7 +208,9 @@ function initializeMobileMenu() {
 // Event delegation as backup
 document.addEventListener("click", (e) => {
   // Hamburger menu toggle
-  if (e.target.closest("#hamburger") || e.target.id === "hamburger") {
+  if (e.target.closest("#hamburger")) {
+    e.preventDefault();
+    e.stopPropagation();
     const mobileMenu = document.getElementById("mobile-menu");
     if (mobileMenu) {
       console.log("Hamburger clicked via delegation");
@@ -203,13 +218,26 @@ document.addEventListener("click", (e) => {
     }
   }
   
-  if (e.target.closest("#services-toggle") || e.target.id === "services-toggle") {
+  // Services toggle - handle clicks on button OR icon
+  if (e.target.closest("#services-toggle")) {
+    e.preventDefault();
+    e.stopPropagation();
     const servicesDropdown = document.getElementById("services-dropdown");
     const chevronIcon = document.getElementById("chevron-icon");
-    if (servicesDropdown && chevronIcon) {
+    if (servicesDropdown) {
       console.log("Services toggle clicked via delegation");
       servicesDropdown.classList.toggle("hidden");
-      chevronIcon.classList.toggle("rotate-180");
+      if (chevronIcon) {
+        chevronIcon.classList.toggle("rotate-180");
+      }
+    }
+  }
+  
+  // Close mobile menu when clicking dropdown links
+  if (e.target.matches("#services-dropdown a")) {
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenu) {
+      mobileMenu.classList.add("hidden");
     }
   }
 });
