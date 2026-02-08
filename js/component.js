@@ -14,7 +14,7 @@ const NavbarTemplate = `
 
         <!-- Nav Links (Desktop) -->
         <nav class="hidden md:flex space-x-6 items-center text-[20px]">
-            <a href="/index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+            <a href="./index.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
             <a href="./pages/about.html" class="text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
             <!-- Services Dropdown -->
@@ -38,7 +38,7 @@ const NavbarTemplate = `
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#29437f] w-full px-6 pb-4 text-lg shadow-md border-t border-[#8ac249]">
-        <a href="/index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
+        <a href="./index.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">Home</a>
         <a href="./pages/about.html" class="block py-2 text-white hover:text-[#8ac249] transition-colors duration-300">About</a>
 
         <!-- Services with sub-items -->
